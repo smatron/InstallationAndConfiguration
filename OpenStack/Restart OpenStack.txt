@@ -1,0 +1,62 @@
+Compute Nodes:
+
+3rd type
+
+sudo service openstack-nova-api restart
+
+
+sudo service openstack-nova-cert restart
+
+
+sudo service openstack-nova-consoleauth restart
+
+
+sudo service openstack-nova-scheduler restart
+
+
+sudo service openstack-nova-conductor restart
+
+
+sudo service openstack-nova-novncproxy restart
+Network Nodes: 4th type
+
+sudo service neutron-server restart
+
+
+sudo service neutron-dhcp-agent restart
+
+
+sudo service neutron-l3-agent restart
+
+
+sudo service neutron-metadata-agent restart
+[[Open Virtual Switch if installed]]
+
+sudo service neutron-openvswitch-agent restart
+Cinder Nodes: 5th type
+
+sudo service openstack-cinder-api restart
+
+
+sudo service openstack-cinder-backup restart
+
+
+sudo service openstack-cinder-scheduler restart
+
+
+sudo service openstack-cinder-volume restart
+If you want to get all the names of the services installed:
+
+6th Type sudo service --status-all | grep nova
+
+sudo service --status-all | grep neutron
+
+sudo service --status-all | grep cinder
+
+1 last thing to do is to type:
+
+cd /path/to/rejoin-stack.sh/folder
+
+sudo ./rejoin-stack.sh
+
+then wait for the confirmation to start using openstack again.

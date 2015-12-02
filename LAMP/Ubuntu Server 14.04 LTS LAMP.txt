@@ -1,0 +1,30 @@
+OS:       Ubuntu Server 14.04
+Hardware: CPU = i7; RAM = 1 GB; Storage: 6 GB
+Program:  LAMP
+Date:     2015-Sep-9
+--------------------------------------------------------------------------
+
+#sudo apt-get update
+#sudo apt-get install apache2
+
+#ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+
+#sudo apt-get install mysql-server php5-mysql
+
+#sudo mysql_install_db
+
+#sudo mysql_secure_installation
+
+#sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt
+
+#sudo vim /etc/apache2/mods-enabled/dir.conf
+
+#sudo service apache2 restart
+
+#apt-cache search php5-
+
+#apt-cache show package_name
+
+#apt-get install package1 package2
+
+#sudo vim /var/www/html/info.php

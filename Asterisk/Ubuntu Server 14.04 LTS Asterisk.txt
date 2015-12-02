@@ -1,0 +1,38 @@
+OS:       Ubuntu Server 14.04
+Hardware: CPU = i7; RAM = 2 GB; Storage: 10 GB
+Program:  Asterisk 11
+Date:     2015-Jan-3
+--------------------------------------------------------------------------
+
+#apt-get update && apt-get upgrade -y && reboot
+
+#apt-get install build-essential wget libssl-dev libncurses5-dev libnewt-dev  libxml2-dev linux-headers-$(uname -r) libsqlite3-dev uuid-dev
+
+#cd /usr/src/
+
+#wget http://downloads.asterisk.org/pub/telephony/dahdi-linux-complete/dahdi-linux-complete-current.tar.gz
+#wget http://downloads.asterisk.org/pub/telephony/libpri/libpri-1.4-current.tar.gz
+#wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-11-current.tar.gz
+
+#tar zxvf dahdi-linux-complete*
+#tar zxvf libpri*
+#tar zxvf asterisk*
+
+#cd /usr/src/dahdi-linux-complete*
+#make && make install && make config
+
+#cd /usr/src/libpri*
+#make && make install
+
+#cd /usr/src/asterisk*
+#./configure && make menuselect && make && make install && make config && make samples
+
+#/etc/init.d/dahdi start
+
+#/etc/init.d/asterisk start
+#asterisk -rvvv
+
+CLI> dahdi show version
+DAHDI Version: 2.6.1 Echo Canceller: HWEC
+CLI> pri show version
+libpri version: 1.4.13
